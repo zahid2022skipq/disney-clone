@@ -12,7 +12,8 @@ const Login = () => {
 const Container = styled.section`
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 `;
 
 const Content = styled.div``;
