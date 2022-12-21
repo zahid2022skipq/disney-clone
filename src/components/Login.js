@@ -4,7 +4,9 @@ import styled from "styled-components";
 const Login = () => {
   return (
     <Container>
-      <Content>Login</Content>
+      <Content>
+        <BgImage />
+      </Content>
     </Container>
   );
 };
@@ -29,6 +31,13 @@ const Content = styled.div`
   flex-direction: column;
   padding: 80px 40px;
   height: 100%;
+`;
+
+const BgImage = styled.div`
+  height: 100%;
+  background-position: top;
+  background-size: cover;
+  background-image: url("images/login-background.jpg");
 `;
 
 export default Login;
