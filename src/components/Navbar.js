@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { auth, provider } from "../firebaseFIle";
 
 const navLinks = [
   { src: "/images/home-icon.svg", alt: "LOGO" },
@@ -11,6 +12,12 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const handleAuth = () => {
+    auth
+      .signInWithPopup(provider)
+      .then((result) => console.log(result))
+      .catch((error) => alert(error.message));
+  };
   return (
     <Nav>
       <NavImg>
@@ -24,7 +31,7 @@ const Navbar = () => {
           </a>
         ))}
       </NavMenu>
-      <Login>Login</Login>
+      <Login onClick={handleAuth}>Login</Login>
     </Nav>
   );
 };
