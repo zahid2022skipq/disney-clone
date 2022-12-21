@@ -7,8 +7,9 @@ const Navbar = () => {
       <NavImg>
         <img src="/images/logo.svg" alt="logo" />
       </NavImg>
-      <NavMenu>Menu</NavMenu>
-      <LoginBtn>Login</LoginBtn>
+      <NavMenu>
+        <LoginBtn>Login</LoginBtn>
+      </NavMenu>
     </Nav>
   );
 };
@@ -48,6 +49,14 @@ const LoginBtn = styled.a`
 const NavMenu = styled.div`
   align-items: center;
   display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  margin-right: auto;
+  margin-left: 25px;
 `;
 
 export default Navbar;
