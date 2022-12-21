@@ -24,6 +24,7 @@ const Navbar = () => {
           </a>
         ))}
       </NavMenu>
+      <Login>Login</Login>
     </Nav>
   );
 };
@@ -55,10 +56,21 @@ const NavImg = styled.a`
   }
 `;
 
-// const LoginBtn = styled.a`
-//   border: 1px solid #f9f9f9;
-//   padding: 10px 10px;
-// `;
+const Login = styled.a`
+  background-color: rgb(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: 1px solid #f9f9f9;
+  border-radius: 4px;
+  transition: all 0.25s ease 0s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f9f9f9;
+    color: rgb(0, 0, 0, 0.6);
+  }
+`;
 
 const NavMenu = styled.div`
   align-items: center;
