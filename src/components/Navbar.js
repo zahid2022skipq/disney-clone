@@ -81,24 +81,23 @@ const NavMenu = styled.div`
       padding: 2px 0;
       white-space: nowrap;
       position: relative;
-      
-          &:before {
-            background-color: rgb(249, 249, 249);
-            border-radius: 0 0 4px 4px;
-            bottom: -6px;
-            content: "";
-            height: 2px;
-            left: 0px;
-            right: 0px;
-            opacity: 0;
-            position: absolute;
-            transform-origin: left center;
-            transform: scaleX(0);
-            transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.96) 0s;
-            visibility: hidden;
-            width: auto;
-          }
 
+      &:before {
+        background-color: rgb(249, 249, 249);
+        border-radius: 0 0 4px 4px;
+        bottom: -6px;
+        content: "";
+        height: 2px;
+        left: 0px;
+        right: 0px;
+        opacity: 0;
+        position: absolute;
+        transform-origin: left center;
+        transform: scaleX(0);
+        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.96) 0s;
+        visibility: hidden;
+        width: auto;
+      }
     }
 
     &:hover {
@@ -107,10 +106,11 @@ const NavMenu = styled.div`
         visibility: visible;
         opacity: 1 !important;
       }
-  }
+    }
 
-  @media (max-width: 760px) {
-    display: none;
+    @media (max-width: 760px) {
+      display: none;
+    }
   }
 `;
 
