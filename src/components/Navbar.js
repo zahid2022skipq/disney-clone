@@ -8,7 +8,10 @@ const Navbar = () => {
         <img src="/images/logo.svg" alt="logo" />
       </NavImg>
       <NavMenu>
-        <LoginBtn>Login</LoginBtn>
+        <a href="/">
+          <img src="images/home-icon.svg" alt="home" />
+          <span>HOME</span>
+        </a>
       </NavMenu>
     </Nav>
   );
@@ -41,10 +44,10 @@ const NavImg = styled.a`
   }
 `;
 
-const LoginBtn = styled.a`
-  border: 1px solid #f9f9f9;
-  padding: 10px 10px;
-`;
+// const LoginBtn = styled.a`
+//   border: 1px solid #f9f9f9;
+//   padding: 10px 10px;
+// `;
 
 const NavMenu = styled.div`
   align-items: center;
@@ -57,6 +60,44 @@ const NavMenu = styled.div`
   position: relative;
   margin-right: auto;
   margin-left: 25px;
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+
+    img {
+      height: 20px;
+      width: 20px;
+      min-width: 20px;
+      z-index: auto;
+    }
+
+    span {
+      color: rgb(249, 249, 249);
+      font-size: 13px;
+      letter-spacing: 1.42px;
+      line-height: 1.08;
+      padding: 2px 0;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    a:before {
+      background-color: rgb(249, 249, 249);
+      border-radius: 0 0 4px 4px;
+      bottom: -6px;
+      content: "";
+      height: 2px;
+      opacity: 0;
+      position: absolute;
+      transform-origin: left center;
+      transform: scaleX(0);
+      transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.96) 0s;
+      visibility: hidden;
+      width: auto;
+    }
+  }
 
   @media (max-width: 760px) {
     display: none;
