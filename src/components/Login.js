@@ -5,6 +5,9 @@ const Login = () => {
   return (
     <Container>
       <Content>
+        <CTA>
+          <CTALogoOne src="/images/cta-logo-one.svg" />
+        </CTA>
         <BgImage />
       </Content>
     </Container>
