@@ -1,6 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
+const navLinks = [
+  { src: "/images/home-icon.svg", alt: "LOGO" },
+  { src: "/images/search-icon.svg", alt: "SEARCH" },
+  { src: "/images/watchlist-icon.svg", alt: "WATCHLIST" },
+  { src: "/images/original-icon.svg", alt: "ORIGNALS" },
+  { src: "/images/movie-icon.svg", alt: "MOVIES" },
+  { src: "/images/series-icon.svg", alt: "SERIES" },
+];
+
 const Navbar = () => {
   return (
     <Nav>
@@ -8,10 +17,12 @@ const Navbar = () => {
         <img src="/images/logo.svg" alt="logo" />
       </NavImg>
       <NavMenu>
-        <a href="/">
-          <img src="images/home-icon.svg" alt="home" />
-          <span>HOME</span>
-        </a>
+        {navLinks.map(({ src, alt }) => (
+          <a key={alt} href={"/" + alt.toLowerCase}>
+            <img src={src} alt={alt} />
+            <span>{alt}</span>
+          </a>
+        ))}
       </NavMenu>
     </Nav>
   );
