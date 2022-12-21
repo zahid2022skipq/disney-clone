@@ -57,6 +57,10 @@ const NavMenu = styled.div`
   position: relative;
   margin-right: auto;
   margin-left: 25px;
+
+  @media (max-width: 760px) {
+    display: none;
+  }
 `;
 
 export default Navbar;
